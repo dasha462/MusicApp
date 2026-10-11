@@ -1,6 +1,6 @@
 # Makam Practice Player — song format, version 1
 
-This is a precise authoring specification for a **monophonic Turkish makam practice song**. Save UTF-8 JSON, without comments or Markdown fences, in a `.json` file. No score reading, inferred key signatures, ornament interpretation, repeat interpretation, or note editing happens in the player. Encode every sounding pitch, rest, duration, and performance repeat explicitly.
+This is a precise authoring specification for a **monophonic Turkish makam practice song**. Save UTF-8 JSON, without comments or Markdown fences, in a `.json` file. Import does not read scores or infer key signatures, ornaments, or repeats. The optional grid editor on this feature branch can insert notes and export the same version-1 format. Encode every sounding pitch, rest, duration, and performance repeat explicitly.
 
 The player is the self-contained `index.html` beside this file. Open it, choose **Song library → Import JSON**, or paste/drop JSON. **Export current song** provides another authoring example.
 
@@ -158,6 +158,8 @@ A loop uses an inclusive contiguous range in **displayed bar order**, ignoring `
 - The first character of a label sits at its onset tick, plus one extra column for each preceding beat divider. Remaining columns contain spaces. Rests show `R` at their onset.
 - For long meters, find the fewest equal-length lines that partition the numerator into whole denominator beats and keep lines at most 72 characters. Every line ends after a beat divider; only the last line gets the extra `|`. A prime-numbered long meter may need one beat per line to keep equal lengths.
 - A note continuing across a visual line break is not relabeled. Its onset label remains highlighted, while the cursor moves to the continuation line.
+- The player can display fixed-do names (C/do, D/re, E/mi, F/fa, G/sol, A/la, B/si) below the stored letter labels, or make fixed-do dominant. Names are derived from `letter` plus the display accidental suffix; they are not added to song events and do not affect frequencies or onset columns.
+- 16ths mode places `1 e & a` at four positions per quarter; 32nds places `1 · e · & · a ·` at eight positions. These are view/editor settings; event duration ticks remain unchanged.
 - Quarters mode marks actual quarter-note positions `1 2 3 …`; Eighths mode marks those positions plus `&` halfway between. These remain true quarter/eighth positions in `/8` meters; denominator beat dividers and metronome clicks still occur every eighth.
 - Only notes with an explicit accidental are colored. Natural notes use the main text color; rest labels and beat dividers are muted. The active note/rest uses the highlight box.
 
@@ -176,6 +178,7 @@ A loop uses an inclusive contiguous range in **displayed bar order**, ignoring `
       "transpose": 0,
       "fine": 0,
       "subdivision": "off",
+      "noteNames": "western",
       "metronome": false,
       "countIn": true
     }
@@ -184,7 +187,7 @@ A loop uses an inclusive contiguous range in **displayed bar order**, ignoring `
 ```
 
 - `format`, `version`, and `songs` are required. `songs` is an array of 0–200 complete valid songs; duplicate titles within one backup are rejected.
-- `settings` is an optional object keyed by exact song title. Tempo percent is clamped to 30–150; transpose must be one of the named shifts above; integer fine is clamped to −53…+53; subdivision is `off`, `quarters`, or `eighths`; toggles are booleans. Invalid/missing setting fields use defaults shown above.
+- `settings` is an optional object keyed by exact song title. Tempo percent is clamped to 30–150; transpose must be one of the named shifts above; integer fine is clamped to −53…+53; subdivision is `off`, `quarters`, `eighths`, `sixteenths`, or `thirtyseconds`; `noteNames` is `western` (letters dominant, default) or `solfege` (fixed-do dominant); toggles are booleans. Invalid/missing setting fields use defaults shown above.
 - Import merges the songs into the current library, asking before same-title replacement. A cancelled replacement changes nothing. All songs are validated **before any change**. Existing songs not mentioned are retained.
 - Settings for imported song titles are restored. The built-in sample's settings can also be restored even when the backup contains no songs. The built-in sample itself is not automatically included in exports; it is already available in every copy of the app.
 - Export does not include transient selection, loop, playhead, or volume positions. Those controls reset on a fresh page.

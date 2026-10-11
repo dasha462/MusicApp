@@ -13,9 +13,18 @@ The built-in **Hicâz İlâhî · Ey rahmeti bol pâdişâh** is available immed
 - **Click a bar** to play from it. **Shift-click** another bar to select a range, then use **Loop selection** or **L**. **Loop part** selects and starts that part. **Clear loop** resumes the full play order.
 - **Tempo** runs from 30% to 150% of the suggested BPM. Changes during playback take effect after the current scheduling horizon (about 120 ms).
 - **Transpose** selects whole-tone, fourth, fifth, or octave shifts. **Fine** changes the result by one koma per step. The readout shows the combined shift and resulting A4 frequency. Future note attacks use the new tuning; already ringing strings decay at their original pitch.
-- **Grid** adds quarter or eighth markers. Beat dividers, notes, and markers share the exact character grid. `/8` meters use eight columns per denominator beat.
+- **Grid** offers quarters, eighths, 16ths (`1 e & a`), and 32nds (`1 · e · & · a ·`). Beat dividers, notes, and markers share the exact character grid. `/8` meters use eight columns per denominator beat.
+- **Names** switches between large letter names with smaller fixed-do names underneath, and large fixed-do names with smaller letters underneath. Fixed-do uses C = do, D = re, E = mi, F = fa, G = sol, A = la, B = si. Accidentals stay attached (C♯ / do♯). This changes labels only; tuning stays the same.
 - **Metronome** clicks every denominator beat, accenting the first. Melody and click have independent volume sliders. Count-in is audible even with Metronome off.
 - Scrolling manually pauses automatic following for 4.5 seconds. Reduced-motion mode uses a stepped cursor and immediate scrolling. Keep the browser in the foreground while practicing; operating systems can suspend background audio or timers.
+
+## Insert notes
+
+This feature branch includes a small grid editor. Choose **16ths** or **32nds** in Grid, then click **+ Insert note**. A dashed marker follows the nearest grid onset. Click the position where the note belongs; the dialog shows its bar, beat, and subdivision step. Choose the letter, octave, Turkish accidental, and duration, then **Insert and save**. You can also focus a bar and press Enter to choose its position in the dialog.
+
+Insertion occupies the chosen interval. It splits or replaces existing notes/rests there while preserving the bar length and all later onsets. For example, inserting a 32nd halfway through a held quarter leaves the first half, the new note, and the remaining tail. A surviving tail re-attacks when it resumes. A duration cannot cross the barline. If a very short leftover cannot fit its two-character label, validation rejects the edit; choose a different position or duration.
+
+Edits save to your browser library and are included in song/library exports. Editing the built-in sample creates an **(edited)** copy. **Undo** reverses up to 50 insertions per song during the current page session; a reload, re-import, or deletion clears that song's undo history. **Done inserting** returns grid clicks to playback. Entering insertion mode with Grid Off selects 32nds.
 
 ## Bring your songs
 
@@ -23,7 +32,7 @@ Give **[SCHEMA.md](SCHEMA.md)** to the person or AI making your transcription. I
 
 Open **Song library** and choose **Import JSON** or **Paste JSON**, or drop a `.json` file anywhere on the page. Invalid files show a specific error and do not alter the library. Re-importing the same title asks before replacing its imported version. The original built-in demo always remains available.
 
-Songs and per-song tempo, tuning, grid, metronome, and count-in settings are saved in this browser when storage permits. Local-file storage behavior differs between browsers and can change when you move or rename `index.html`. Use **Export library** to make a backup or move browsers, then import that JSON file into the other browser. **Export current song** saves only the selected transcription. Delete uses an in-page confirmation.
+Songs and per-song tempo, tuning, grid, dominant note names, metronome, and count-in settings are saved in this browser when storage permits. Local-file storage behavior differs between browsers and can change when you move or rename `index.html`. Use **Export library** to make a backup or move browsers, then import that JSON file into the other browser. **Export current song** saves only the selected transcription. Delete uses an in-page confirmation.
 
 If storage is blocked or full, the app stays usable for the current session and displays a backup reminder. Export before closing.
 
@@ -41,7 +50,7 @@ Shortcuts are suspended while typing into controls or while a dialog is open.
 | Shift+L | Clear loop |
 | M | Metronome on/off |
 | C | Count-in on/off |
-| S | Cycle Off / Quarters / Eighths |
+| S | Cycle Off / Quarters / Eighths / 16ths / 32nds (Off is skipped while inserting) |
 | ? | Show shortcut help |
 
 ## Checks
@@ -59,4 +68,4 @@ python -m http.server 8000 --bind 127.0.0.1
 
 This is a testing convenience; the app itself does not require a server. No dependencies need installing.
 
-Validation passed in Linux Chromium with Web Audio: 20 built-in self-tests, 43 browser interaction checks, and complete performances at 50%, 100%, and 150% tempo. Each performance scheduled all 376 melody attacks and 128 clicks across all 32 bar visits, with no detected highlight/cursor mismatch. These are scheduling and DOM observations, not an audible listening judgment. This environment's managed browser blocks navigation to `file://`, and it has no macOS Safari. Direct-file behavior and audible tone quality in Mac Chrome, Safari, and Firefox therefore still need a device check. The deterministic self-tests do not replace that listening test.
+Validation passed in Linux Chromium with Web Audio: 28 built-in self-tests, 43 browser regression checks, and 23 editor/label checks (including exact click placement, Undo, persistence, export, and edited-note playback). The original player was also validated with complete performances at 50%, 100%, and 150% tempo. Each performance scheduled all 376 melody attacks and 128 clicks across all 32 bar visits, with no detected highlight/cursor mismatch. These are scheduling and DOM observations, not an audible listening judgment. This environment's managed browser blocks navigation to `file://`, and it has no macOS Safari. Direct-file behavior and audible tone quality in Mac Chrome, Safari, and Firefox therefore still need a device check. The deterministic self-tests do not replace that listening test.
