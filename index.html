@@ -12,7 +12,167 @@
 @media(max-width:800px){.shell{padding:0 20px}header{padding-top:22px}.masthead{gap:12px}.header-actions button{padding:7px 9px}.tag{display:none}.transport{padding:13px;gap:14px}.hint{max-width:210px;text-align:right;font-size:11px}.bar-row{padding-left:27px}.bar-number{left:4px}.part-title{font-size:11px}.part-loop{padding:4px}.status-row{gap:8px}#shift-status{max-width:150px}.secondary-controls .spacer{display:none}.part-heading{gap:5px}}
 @media(max-width:480px){.shell{padding:0 10px}.masthead{flex-wrap:wrap}.part-heading{align-items:flex-start}.part-title{font-size:10px}.bar-row{padding-left:20px}.bar-number{font-size:8px;left:1px}.guide-intro{gap:10px}.control{gap:6px}.key{gap:10px}.footer-row{flex-wrap:wrap}.hint{font-size:10px}.volume-label{font-size:10px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Paired staff experiment. Music glyph outlines from Noto Music (SIL OFL 1.1). */
+.guide-tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.view-toggle{display:flex;gap:3px}.view-toggle button{font-size:12px;padding:6px 10px}.sheet-caption{margin:10px 0 0;color:var(--muted);font-size:12px;max-width:850px}.text-track{position:relative}.score-wrap{overflow-x:auto;overscroll-behavior-x:contain;padding:3px 0 7px;scrollbar-width:thin}.staff-score{display:block;width:100%;height:auto;min-width:680px;color:var(--ink);overflow:visible}.staff-line{stroke:var(--bar);stroke-width:.8;opacity:.65}.staff-bar{stroke:var(--bar);stroke-width:1.2}.staff-ledger{stroke:currentColor;stroke-width:1}.sheet-event{fill:currentColor}.sheet-event .sheet-halo{fill:var(--highlight);opacity:0}.sheet-event.active .sheet-halo{opacity:.13}.sheet-event.active{color:var(--accent)!important}.staff-cursor{stroke:var(--accent);stroke-width:1.5;pointer-events:none;display:none}.staff-signature{fill:currentColor;font:bold 22px Georgia,serif}.sheet-accidental{fill:currentColor;font:10px system-ui,sans-serif;font-weight:600}.sheet-tie{fill:none;stroke:currentColor;stroke-width:1.4}.sheet-beam{fill:var(--ink)}.sheet-notehead{stroke:currentColor;stroke-width:1.3}.sheet-stem{stroke:currentColor;stroke-width:1.3}.text-only .score-wrap{display:none}.text-only .sheet-caption{display:none}.staff-grid{stroke:var(--line);stroke-width:.75;stroke-dasharray:2 4}.sheet-readout{font:10px system-ui,sans-serif;fill:var(--muted)}
+@media(max-width:800px){.guide-intro{align-items:flex-start;gap:10px;flex-wrap:wrap}.guide-tools{gap:8px}.sheet-caption{font-size:11px}.staff-score{min-width:620px}.score-wrap{margin-bottom:5px}.bar-row{padding-right:4px}.view-toggle button{font-size:11px}}
 </style>
+<!-- Noto Music glyph outlines: Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Noto
+Upstream-Contact: https://github.com/googlei18n/noto-fonts/issues
+ http://groups.google.com/group/noto-font
+Source: https://github.com/googlei18n/noto-fonts
+
+Files: *
+Copyright:
+  2010,2012-2020, Google Inc.
+  2015-2020, Google LLC.
+License-Grant:
+ This Font Software is licensed under the SIL Open Font License,
+ Version 1.1.
+License: OFL-1.1
+
+Files:
+ debian/*
+Copyright:
+  2013-2020, Jonas Smedegaard <dr@jones.dk>
+  2020, Purism, SPC
+  2013, Vasudev Kamath <kamathvasudev@gmail.com>
+License-Grant:
+ This program is free software;
+ you can redistribute it and/or modify it
+ under the terms of the GNU General Public License
+ as published by the Free Software Foundation;
+ either version 3, or (at your option) any later version.
+License: GPL-3+
+
+Files:
+ debian/NotoMono/NotoMono-Regular.ttf
+Copyright:
+  2007, Google Inc.
+License-Grant:
+ This Font Software is licensed under the SIL Open Font License,
+ Version 1.1.
+License: OFL-1.1
+
+License: OFL-1.1
+ PREAMBLE
+ .
+ The goals of the Open Font License (OFL) are to stimulate
+ worldwide development of collaborative font projects,
+ to support the font creation efforts
+ of academic and linguistic communities,
+ and to provide a free and open framework
+ in which fonts may be shared and improved
+ in partnership with others.
+ .
+ The OFL allows the licensed fonts to be used, studied,
+ modified and redistributed freely
+ as long as they are not sold by themselves.
+ The fonts, including any derivative works,
+ can be bundled, embedded,
+ redistributed and/or sold with any software
+ provided that any reserved names are not used
+ by derivative works.
+ The fonts and derivatives, however,
+ cannot be released under any other type of license.
+ The requirement for fonts to remain under this license
+ does not apply to any document
+ created using the fonts or their derivatives.
+ .
+ DEFINITIONS
+ .
+ "Font Software" refers to the set of files
+ released by the Copyright Holder(s) under this license
+ and clearly marked as such.
+ This may include source files, build scripts and documentation.
+ .
+ "Reserved Font Name" refers to any names specified as such
+ after the copyright statement(s).
+ .
+ "Original Version" refers to the collection
+ of Font Software components
+ as distributed by the Copyright Holder(s).
+ .
+ "Modified Version" refers to any derivative
+ made by adding to, deleting, or substituting —
+ in part or in whole —
+ any of the components of the Original Version,
+ by changing formats
+ or by porting the Font Software to a new environment.
+ .
+ "Author" refers to any designer, engineer, programmer,
+ technical writer or other person
+ who contributed to the Font Software.
+ .
+ PERMISSION & CONDITIONS
+ .
+ Permission is hereby granted, free of charge,
+ to any person obtaining a copy of the Font Software,
+ to use, study, copy, merge, embed, modify, redistribute,
+ and sell modified and unmodified copies of the Font Software,
+ subject to the following conditions:
+ .
+ 1) Neither the Font Software nor any of its individual components,
+ in Original or Modified Versions,
+ may be sold by itself.
+ .
+ 2) Original or Modified Versions of the Font Software
+ may be bundled, redistributed and/or sold with any software,
+ provided that each copy contains the above copyright notice
+ and this license.
+ These can be included either as stand-alone text files,
+ human-readable headers or in the appropriate
+ machine-readable metadata fields within text or binary files
+ as long as those fields can be easily viewed by the user.
+ .
+ 3) No Modified Version of the Font Software may use
+ the Reserved Font Name(s)
+ unless explicit written permission is granted
+ by the corresponding Copyright Holder.
+ This restriction only applies to the primary font name
+ as presented to the users.
+ .
+ 4) The name(s) of the Copyright Holder(s)
+ or the Author(s) of the Font Software
+ shall not be used to promote,
+ endorse or advertise any Modified Version,
+ except to acknowledge the contribution(s)
+ of the Copyright Holder(s) and the Author(s)
+ or with their explicit written permission.
+ .
+ 5) The Font Software,
+ modified or unmodified, in part or in whole,
+ must be distributed entirely under this license,
+ and must not be distributed under any other license.
+ The requirement for fonts to remain under this license
+ does not apply to any document
+ created using the Font Software.
+ .
+ TERMINATION
+ .
+ This license becomes null and void
+ if any of the above conditions are not met.
+ .
+ DISCLAIMER
+ .
+ THE FONT SOFTWARE IS PROVIDED "AS IS",
+ WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO
+ ANY WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+ OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT.
+ IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE
+ FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ INCLUDING ANY GENERAL, SPECIAL, INDIRECT,
+ INCIDENTAL, OR CONSEQUENTIAL DAMAGES,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF THE USE OR INABILITY TO USE
+ THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.
+
+License: GPL-3+
+License-Reference: /usr/share/common-licenses/GPL-3
+ -->
 </head>
 <body>
 <div class="shell">
@@ -29,8 +189,9 @@
 <div id="notice" class="notice" role="status"></div>
 </header>
 <main>
-<div class="guide-intro"><span class="eyebrow">The practice guide</span><span class="hint">Click a bar to play · Shift-click to select a range</span></div>
-<div id="guide" aria-label="Song notation"></div>
+<div class="guide-intro"><div class="guide-tools"><span class="eyebrow">The practice guide</span><div class="view-toggle" role="group" aria-label="Notation view"><button id="sheet-view" aria-pressed="true">Sheet + text</button><button id="text-view" aria-pressed="false">Text only</button></div></div><span class="hint">Click a bar to play · Shift-click to select a range</span></div>
+<p class="sheet-caption">Follow the highlighted note in both views. ↑ / ↓ labels show exact koma alterations; the staff stays at written pitch. On small screens, swipe the staff to explore a bar.</p>
+<div id="guide" aria-label="Paired sheet music and text notation"></div>
 <div id="key" class="key" aria-label="Altered note key"></div>
 <div id="song-notes" class="footnote"></div>
 </main>
@@ -160,15 +321,84 @@ function pause(){if(!playing)return;resumeTick=Math.max(play.musicStart,clock.ti
 function stop(){++playGeneration;playing=false;paused=false;resumeFromPause=false;resumeTick=0;startBarIndex=loopRange?loopRange[0]:0;clearInterval(timer);cancelAnimationFrame(raf);silence();clearHighlights();updateTransport();$('position').textContent=loopRange?`Ready · loop bars ${song.bars[loopRange[0]].id}–${song.bars[loopRange[1]].id}`:'Ready to practice · '+song.parts[0].title.split(':')[0];}
 function restartAt(index,autoplay=playing,orderHint=null){const wasPlaying=playing;stop();startBarIndex=index;prepareRoute();const candidates=route.bars.filter(v=>v.bar.id===song.bars[index].id);const target=candidates.find(v=>orderHint!=null&&v.orderIndex>=orderHint)||candidates[0]||route.bars[0];resumeTick=target.start;paused=true;$('position').textContent='Ready · '+positionText(target);drawAt(resumeTick);if(autoplay)play(!wasPlaying);}
 function positionText(v){if(!v)return 'Ready to practice';return [v.label,v.part.title.split(':')[0],`pass ${v.pass} of ${v.passes}`,`bar ${v.bar.id}`].filter(Boolean).join(' · ');}
-function clearHighlights(){if(activeNote)activeNote.classList.remove('active');activeNote=null;document.querySelectorAll('.is-playing').forEach(e=>e.classList.remove('is-playing'));document.querySelectorAll('.cursor').forEach(e=>e.style.display='none');lastVisualBar=null;lastVisualLine=null;currentVisit=null;}
+function clearHighlights(){activeSheet.forEach(n=>n.classList.remove("active"));activeSheet=[];lastSheetWrap=null;document.querySelectorAll(".staff-cursor").forEach(n=>n.style.display="none");if(activeNote)activeNote.classList.remove('active');activeNote=null;document.querySelectorAll('.is-playing').forEach(e=>e.classList.remove('is-playing'));document.querySelectorAll('.cursor').forEach(e=>e.style.display='none');lastVisualBar=null;lastVisualLine=null;currentVisit=null;}
 function drawFrame(){if(!playing)return;const tick=clock.tickAt(audio.currentTime);if(!loopRange&&tick>=route.total){stop();$('position').textContent='Performance complete · ready to play again';return;}if(play.countEnd!==null&&tick<play.countEnd){const remaining=play.countEnd-tick;const beat=Math.min(song.metadata.timeSignature.numerator,Math.max(1,song.metadata.timeSignature.numerator-Math.ceil(remaining/beatTicks(song))+1));$('position').textContent=`Count-in · ${beat} / ${song.metadata.timeSignature.numerator}`;}else drawAt(Math.max(play.musicStart,tick));raf=requestAnimationFrame(drawFrame);}
-function drawAt(tick){const v=visitAt(tick);if(!v)return;currentVisit=v;const inBar=localTick(tick)-v.start;const row=document.querySelector(`[data-bar="${v.bar.id}"]`);if(!row)return;if(lastVisualBar!==row){if(lastVisualBar)lastVisualBar.classList.remove('is-playing');row.classList.add('is-playing');lastVisualBar=row;}$('position').textContent=positionText(v);let onset=0,index=0;for(let i=0;i<v.bar.events.length;i++){if(onset<=inBar)index=i;onset+=v.bar.events[i].duration;}const note=row.querySelector(`[data-event="${index}"]`);if(activeNote!==note){if(activeNote)activeNote.classList.remove('active');activeNote=note;if(note)note.classList.add('active');}const lines=[...row.querySelectorAll('.line-wrap')];const line=lines.find(l=>inBar>=Number(l.dataset.start)&&inBar<Number(l.dataset.end))||lines[lines.length-1];if(lastVisualLine!==line){if(lastVisualLine)lastVisualLine.querySelector('.cursor').style.display='none';lastVisualLine=line;}const cursor=line.querySelector('.cursor');const offset=inBar-Number(line.dataset.start);const t=reducedMotion.matches?Math.floor(offset/2)*2:offset;const col=t+Math.floor(t/beatTicks(song));cursor.style.display='block';const pre=line.querySelector('.guide-line');cursor.style.left=(col*(pre.getBoundingClientRect().width/pre.textContent.length))+'px';maybeScroll(line);}
+function drawAt(tick){const v=visitAt(tick);if(!v)return;currentVisit=v;const inBar=localTick(tick)-v.start;const row=document.querySelector(`[data-bar="${v.bar.id}"]`);if(!row)return;if(lastVisualBar!==row){if(lastVisualBar)lastVisualBar.classList.remove('is-playing');row.classList.add('is-playing');lastVisualBar=row;}$('position').textContent=positionText(v);let onset=0,index=0;for(let i=0;i<v.bar.events.length;i++){if(onset<=inBar)index=i;onset+=v.bar.events[i].duration;}const note=row.querySelector(`[data-event="${index}"]`);if(activeNote!==note){if(activeNote)activeNote.classList.remove('active');activeNote=note;if(note)note.classList.add('active');}const lines=[...row.querySelectorAll('.line-wrap')];const line=lines.find(l=>inBar>=Number(l.dataset.start)&&inBar<Number(l.dataset.end))||lines[lines.length-1];if(lastVisualLine!==line){if(lastVisualLine)lastVisualLine.querySelector('.cursor').style.display='none';lastVisualLine=line;}const cursor=line.querySelector('.cursor');const offset=inBar-Number(line.dataset.start);const t=reducedMotion.matches?Math.floor(offset/2)*2:offset;const col=t+Math.floor(t/beatTicks(song));cursor.style.display='block';const pre=line.querySelector('.guide-line');cursor.style.left=(col*(pre.getBoundingClientRect().width/pre.textContent.length))+'px';drawSheet(row,line,index,inBar);maybeScroll(line);}
 function maybeScroll(line){if(!playing||performance.now()<manualScrollUntil||performance.now()-lastScrollAt<700)return;const r=line.getBoundingClientRect();if(r.top<60||r.bottom>innerHeight*.78){lastScrollAt=performance.now();window.scrollTo({top:Math.max(0,scrollY+r.top-innerHeight*.32),behavior:reducedMotion.matches?'instant':'smooth'});}}
 function manualScroll(){manualScrollUntil=performance.now()+4500;}
 for(const event of ['wheel','touchmove'])window.addEventListener(event,manualScroll,{passive:true});window.addEventListener('pointerdown',e=>{if(e.clientX>=document.documentElement.clientWidth-12)manualScroll();});
+
+// SVG engraving uses the same events and 64th-note ticks as the audio and text.
+// Pitch alterations are explicitly labelled in koma, rather than rounded to 12-EDO.
+const MUSIC_GLYPHS={"clef":"M314 801Q300 854 291.0 906.0Q282 958 282 1012Q282 1059 288.5 1100.5Q295 1142 307 1177Q320 1217 341.0 1252.5Q362 1288 385.5 1311.0Q409 1334 427 1334Q451 1334 493 1249Q514 1206 524.0 1156.0Q534 1106 534 1049Q534 978 515.0 907.5Q496 837 459.5 775.0Q423 713 372 666L407 498Q422 500 432.0 501.0Q442 502 447 502Q508 502 556.0 467.5Q604 433 632.5 377.0Q661 321 661 254Q661 177 621.5 115.5Q582 54 503 25Q508 8 532 -117Q538 -147 541.0 -164.5Q544 -182 545.0 -195.0Q546 -208 546 -225Q546 -275 521.5 -314.5Q497 -354 455.5 -376.0Q414 -398 363 -398Q311 -398 271.0 -378.5Q231 -359 208.0 -324.5Q185 -290 185 -245Q185 -197 211.5 -165.0Q238 -133 287 -133Q329 -133 355.5 -163.5Q382 -194 382 -236Q382 -272 357.0 -299.0Q332 -326 292 -326H282Q308 -365 364 -365Q433 -365 472.0 -320.0Q511 -275 511 -205Q511 -188 507.0 -159.5Q503 -131 493 -91Q483 -51 477.5 -25.0Q472 1 470 12Q436 2 390 2Q304 2 222 52Q142 102 96.0 184.0Q50 266 50 361Q50 451 91 530Q132 609 192.5 675.0Q253 741 314 801ZM341 826Q364 838 390.0 870.5Q416 903 440.0 945.0Q464 987 479.0 1029.5Q494 1072 494 1106Q494 1142 483.0 1163.0Q472 1184 445 1184Q421 1184 398.5 1162.0Q376 1140 358.5 1103.5Q341 1067 331.0 1022.0Q321 977 321 930Q321 898 327.5 872.0Q334 846 341 826ZM398 379Q371 373 347.0 353.5Q323 334 308.5 306.5Q294 279 294 248Q294 223 307.0 196.5Q320 170 339 154Q352 142 365 136Q380 129 380 123Q380 120 370 117Q332 126 301.5 151.0Q271 176 253.5 211.5Q236 247 236 287Q236 330 253.5 370.0Q271 410 302.5 442.0Q334 474 374 490L345 641Q229 547 174.5 456.5Q120 366 120 277Q120 212 154.0 156.0Q188 100 247.0 65.5Q306 31 380 31Q400 31 420.5 35.0Q441 39 464 45ZM495 55Q593 97 593 227Q593 270 571.0 305.5Q549 341 512.0 362.0Q475 383 429 383Z","rest64":"M50 488V512H733V488H573V378H210V488Z","rest32":"M50 244V268H210V378H573V268H733V244Z","rest16":"M147 878 307 683Q257 624 230.0 581.0Q203 538 203 494Q203 457 227.0 416.5Q251 376 303 314L287 292Q243 320 205 320Q177 320 163.0 301.5Q149 283 149 257Q149 225 162.5 196.5Q176 168 199 142L186 123Q117 173 84.0 214.0Q51 255 51 303Q51 346 78.0 366.0Q105 386 143 386Q173 386 221 363V365L67 570Q168 659 168 736Q168 797 104 878Z","rest8":"M155 269 251 609Q230 590 203.5 582.0Q177 574 151 574Q108 574 79.0 597.0Q50 620 50 663Q50 691 70.0 710.5Q90 730 121 730Q150 730 168.5 711.5Q187 693 187 662Q187 640 177 623Q177 617 189 617Q244 617 294 703H312L191 269Z","rest4":"M155 147 251 487Q230 468 203.5 460.0Q177 452 151 452Q108 452 79.0 475.0Q50 498 50 541Q50 569 69.5 588.5Q89 608 121 608Q150 608 168.5 589.5Q187 571 187 540Q187 518 177 501Q177 495 189 495Q230 495 267 541L319 731Q298 712 271.5 704.0Q245 696 219 696Q176 696 147.0 719.0Q118 742 118 785Q118 813 138.0 832.5Q158 852 189 852Q219 852 237.0 833.0Q255 814 255 784Q255 774 252.0 763.5Q249 753 245 745Q245 739 257 739Q312 739 362 825H380L191 147Z","rest2":"M155 -4 251 336Q230 317 203.5 309.0Q177 301 151 301Q108 301 79.0 324.0Q50 347 50 390Q50 417 70.0 437.0Q90 457 121 457Q150 457 168.5 438.5Q187 420 187 389Q187 367 177 350Q177 344 189 344Q230 344 267 390L319 580Q298 561 271.5 553.0Q245 545 219 545Q176 545 147.0 568.0Q118 591 118 634Q118 663 138.0 682.0Q158 701 189 701Q219 701 237.0 682.0Q255 663 255 633Q255 623 252.0 612.5Q249 602 245 594Q245 588 257 588Q298 588 334 633L390 834Q369 815 342.5 807.0Q316 799 290 799Q247 799 218.0 822.0Q189 845 189 888Q189 917 209.0 936.0Q229 955 260 955Q290 955 308.0 936.0Q326 917 326 887Q326 877 323.0 866.5Q320 856 316 848Q316 842 328 842Q382 842 433 928H451L191 -4Z","rest1":"M155 -130 251 210Q230 191 203.5 183.0Q177 175 151 175Q108 175 79.0 198.0Q50 221 50 264Q50 291 70.0 311.0Q90 331 121 331Q150 331 168.5 312.5Q187 294 187 263Q187 241 177 224Q177 218 189 218Q230 218 267 264L319 454Q298 435 271.5 427.0Q245 419 219 419Q176 419 147.0 442.0Q118 465 118 508Q118 537 138.0 556.0Q158 575 189 575Q219 575 237.0 556.0Q255 537 255 507Q255 497 252.0 486.5Q249 476 245 468Q245 462 257 462Q298 462 334 507L390 708Q369 689 342.5 681.0Q316 673 290 673Q247 673 218.0 696.0Q189 719 189 762Q189 791 209.0 810.0Q229 829 260 829Q290 829 308.0 810.0Q326 791 326 761Q326 751 323.0 740.5Q320 730 316 722Q316 716 328 716Q368 716 405 761L460 960Q439 941 412.5 933.0Q386 925 360 925Q317 925 288.0 948.0Q259 971 259 1014Q259 1041 279.0 1061.0Q299 1081 330 1081Q359 1081 377.5 1062.5Q396 1044 396 1013Q396 991 386 974Q386 968 398 968Q453 968 503 1054H521L191 -130Z"};
+const SHEET_DURATIONS=[64,48,32,24,16,12,8,6,4,3,2,1];
+let sheetVisible=true,activeSheet=[],lastSheetWrap=null;
+function svgNode(tag,attrs={},parent=null){const node=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [key,value] of Object.entries(attrs))node.setAttribute(key,String(value));if(parent)parent.append(node);return node;}
+function sheetPitchY(e){return 110-((e.octave-4)*7+'CDEFGAB'.indexOf(e.letter)-2)*5.5;}
+function sheetPieces(bar,line){const pieces=[];let onset=0;for(const [index,event] of bar.events.entries()){const end=onset+event.duration;let tick=Math.max(onset,line.start),remaining=Math.min(end,line.end)-tick;while(remaining>0){const duration=SHEET_DURATIONS.find(d=>d<=remaining),dotted=[48,24,12,6,3].includes(duration),base=dotted?duration*2/3:duration;pieces.push({event,index,tick,duration,base,dotted,tieIn:tick>onset,tieOut:tick+duration<end});tick+=duration;remaining-=duration;}onset=end;}return pieces;}
+function renderStaff(bar,line){
+ const wrap=document.createElement('div');wrap.className='score-wrap';
+ const pieces=sheetPieces(bar,line),width=Math.max(760,104+pieces.length*55),start=82,end=width-22;
+ // Interpolate through variable-width onset slots to reserve room for accidentals.
+ const weights=pieces.map(p=>p.event.accidental?1.4:1),total=weights.reduce((a,b)=>a+b,0),points=[];let used=0;
+ for(let i=0;i<pieces.length;i++){points.push({tick:pieces[i].tick,x:start+(end-start)*used/total});used+=weights[i];}
+ points.push({tick:line.end,x:end});
+ const xAt=tick=>{let i=0;while(i<points.length-2&&tick>=points[i+1].tick)i++;const a=points[i],b=points[i+1];return a.x+(b.x-a.x)*(tick-a.tick)/(b.tick-a.tick);};
+ const ys=pieces.filter(p=>p.event.type==='note').map(p=>sheetPitchY(p.event)),top=Math.min(12,...ys.map(y=>y-52)),bottom=Math.max(155,...ys.map(y=>y+52));
+ const svg=svgNode('svg',{viewBox:`0 ${top} ${width} ${bottom-top}`,class:'staff-score',role:'img','aria-label':`Bar ${bar.id}, treble clef, ${song.metadata.timeSignature.numerator}/${song.metadata.timeSignature.denominator}. `+pieces.map(p=>p.event.type==='rest'?`Rest, ${p.duration} ticks`:`${p.event.label}${p.event.octave}${p.event.accidental?', '+ACCIDENTAL_NAMES[p.event.accidental]:''}, ${p.duration} ticks`).join('; ')});
+ for(let y=66;y<=110;y+=11)svgNode('line',{x1:5,x2:width-10,y1:y,y2:y,class:'staff-line'},svg);
+ svgNode('path',{d:MUSIC_GLYPHS.clef,transform:'translate(8 114) scale(.047 -.047)',fill:'currentColor'},svg);
+ for(const [value,y] of [[song.metadata.timeSignature.numerator,84],[song.metadata.timeSignature.denominator,105]]){const t=svgNode('text',{x:54,y,class:'staff-signature','text-anchor':'middle'},svg);t.textContent=value;}
+ const coords=[],groups=[];
+ for(const p of pieces){
+  const x=xAt(p.tick),e=p.event,y=e.type==='rest'?88:sheetPitchY(e),g=svgNode('g',{class:'sheet-event'+(e.accidental?' altered-'+colors.get(alteredKey(e)):''),'data-sheet-event':p.index,'data-tick':p.tick},svg);
+  const title=svgNode('title',{},g);title.textContent=e.type==='rest'?`Rest · ${p.duration}/64 whole note`:`${e.label}${e.octave} · ${p.duration}/64 whole note${e.accidental?' · '+ACCIDENTAL_NAMES[e.accidental]+' ('+ACCIDENTALS[e.accidental]+' koma)':''}`;
+  svgNode('rect',{x:x-14,y:y-16,width:28,height:32,rx:8,class:'sheet-halo'},g);
+  const dir=y<88?-1:1,stemX=x+(dir===1?6:-6),stemEnd=y-dir*34,flags=Math.max(0,Math.log2(8/p.base)+1);
+  if(e.type==='rest')svgNode('path',{d:MUSIC_GLYPHS['rest'+p.base],transform:`translate(${x-9} 112) scale(.045 -.045)`,fill:'currentColor'},g);
+  else{
+   for(let ledger=121;ledger<=y;ledger+=11)svgNode('line',{x1:x-10,x2:x+10,y1:ledger,y2:ledger,class:'staff-ledger'},g);
+   for(let ledger=55;ledger>=y;ledger-=11)svgNode('line',{x1:x-10,x2:x+10,y1:ledger,y2:ledger,class:'staff-ledger'},g);
+   svgNode('ellipse',{cx:x,cy:y,rx:p.base===64?8:6.2,ry:4.2,transform:`rotate(-20 ${x} ${y})`,fill:p.base>=32?'var(--panel)':'currentColor',class:'sheet-notehead'},g);
+   if(p.base<64)svgNode('line',{x1:stemX,x2:stemX,y1:y,y2:stemEnd,class:'sheet-stem'},g);
+   if(e.accidental&&!p.tieIn){const t=svgNode('text',{x:x-11,y:y-9,'text-anchor':'end',class:'sheet-accidental'},g);const k=ACCIDENTALS[e.accidental];t.textContent=(k>0?'↑':'↓')+Math.abs(k);}
+  }
+  if(p.dotted)svgNode('circle',{cx:x+12,cy:y===Math.round(y/11)*11?y-5.5:y,r:1.8,fill:'currentColor'},g);
+  coords.push({...p,x,y,g,dir,stemX,stemEnd,flags});
+ }
+ // Beam consecutive short notes within each denominator beat. Rests break beams.
+ for(let i=0;i<coords.length;){const a=coords[i];if(a.event.type==='rest'||!a.flags){i++;continue;}let j=i+1;while(j<coords.length&&coords[j].event.type==='note'&&coords[j].flags&&Math.floor(coords[j].tick/line.beat)===Math.floor(a.tick/line.beat))j++;groups.push(coords.slice(i,j));i=j;}
+ for(const group of groups){if(group.length===1){const p=group[0];for(let n=0;n<p.flags;n++){const sy=p.stemEnd+p.dir*n*6;svgNode('path',{d:`M${p.stemX} ${sy} q${p.dir*13} ${p.dir*7} ${p.dir*6} ${p.dir*19} q${p.dir*12} ${-p.dir*12} ${-p.dir*6} ${-p.dir*19}`,fill:'currentColor'},p.g);}continue;}
+  const dir=group.reduce((sum,p)=>sum+p.y,0)/group.length<88?-1:1,beamY=dir===1?Math.min(...group.map(p=>p.y))-32:Math.max(...group.map(p=>p.y))+32;
+  for(const p of group){p.stemX=p.x+(dir===1?6:-6);p.g.querySelector('.sheet-stem').setAttribute('x1',p.stemX);p.g.querySelector('.sheet-stem').setAttribute('x2',p.stemX);p.g.querySelector('.sheet-stem').setAttribute('y2',beamY);}
+  const beam=(x1,x2,n)=>{const y=beamY+dir*n*6;svgNode('path',{d:`M${x1} ${y}H${x2}V${y+dir*3.5}H${x1}Z`,class:'sheet-beam'},svg);};
+  beam(group[0].stemX,group[group.length-1].stemX,0);
+  for(let n=1;n<Math.max(...group.map(p=>p.flags));n++)for(let i=0;i<group.length;i++){const p=group[i];if(p.flags<=n)continue;const next=group[i+1],prev=group[i-1];if(next&&next.flags>n)beam(p.stemX,next.stemX,n);else if(!prev||prev.flags<=n)beam(p.stemX,p.stemX+(next?9:-9),n);}
+ }
+ for(let i=0;i<coords.length;i++){const p=coords[i];if(p.event.type==='rest')continue;const next=coords[i+1],tieY=p.y+12;
+  if(p.tieOut){const target=next&&next.index===p.index?next.x-7:width-12;svgNode('path',{d:`M${p.x+7} ${tieY} Q${(p.x+7+target)/2} ${tieY+10} ${target} ${tieY}`,class:'sheet-tie'},p.g);}
+  if(p.tieIn&&(i===0||coords[i-1].index!==p.index))svgNode('path',{d:`M${start-17} ${tieY} Q${start-6} ${tieY+6} ${p.x-7} ${tieY}`,class:'sheet-tie'},p.g);
+ }
+ for(let tick=line.start;tick<line.end;tick+=line.beat){const t=svgNode('text',{x:xAt(tick),y:bottom-7,'text-anchor':'middle',class:'sheet-readout'},svg);t.textContent=String(Math.floor(tick/line.beat)+1);}
+ svgNode('line',{x1:width-12,x2:width-12,y1:66,y2:110,class:'staff-bar'},svg);
+ if(line.end===barTicks(song))svgNode('line',{x1:width-8,x2:width-8,y1:66,y2:110,class:'staff-bar'},svg);
+ svgNode('line',{x1:start,x2:start,y1:top+6,y2:bottom-20,class:'staff-cursor'},svg);
+ wrap.append(svg);wrap.sheetXAt=xAt;return wrap;
+}
+function drawSheet(row,line,index,inBar){
+ const notes=[...row.querySelectorAll(`[data-sheet-event="${index}"]`)];
+ if(notes.length!==activeSheet.length||notes.some((n,i)=>n!==activeSheet[i])){activeSheet.forEach(n=>n.classList.remove('active'));activeSheet=notes;activeSheet.forEach(n=>n.classList.add('active'));}
+ const wrap=line.querySelector('.score-wrap');if(!wrap)return;
+ if(lastSheetWrap&&lastSheetWrap!==wrap)lastSheetWrap.querySelector('.staff-cursor').style.display='none';lastSheetWrap=wrap;
+ const cursor=wrap.querySelector('.staff-cursor'),tick=reducedMotion.matches?Math.floor(inBar/2)*2:inBar,x=wrap.sheetXAt(tick);cursor.setAttribute('x1',x);cursor.setAttribute('x2',x);cursor.style.display=sheetVisible?'block':'none';
+ if(sheetVisible&&playing&&performance.now()>=manualScrollUntil){const width=wrap.querySelector('svg').viewBox.baseVal.width,screenX=x*wrap.querySelector('svg').getBoundingClientRect().width/width;if(screenX<wrap.scrollLeft+20||screenX>wrap.scrollLeft+wrap.clientWidth-40)wrap.scrollLeft=Math.max(0,screenX-wrap.clientWidth*.3);}
+}
+function setSheetView(visible){sheetVisible=visible;document.querySelector('main').classList.toggle('text-only',!visible);$('sheet-view').setAttribute('aria-pressed',String(visible));$('text-view').setAttribute('aria-pressed',String(!visible));fitGuide();if(currentVisit)drawAt(playing?clock.tickAt(audio.currentTime):resumeTick);}
+$('sheet-view').onclick=()=>setSheetView(true);$('text-view').onclick=()=>setSheetView(false);
+
 function alteredKey(e){return e.letter+':'+e.accidental;}
 let colors=new Map();
-function renderGuide(){colors=new Map();for(const b of song.bars)for(const e of b.events)if(e.accidental&&!colors.has(alteredKey(e)))colors.set(alteredKey(e),colors.size%6);const guide=$('guide');guide.replaceChildren();const bars=new Map(song.bars.map(b=>[b.id,b]));for(const part of song.parts){const section=document.createElement('section');section.className='part';const heading=document.createElement('div');heading.className='part-heading';const title=document.createElement('h2');title.className='part-title';title.textContent=part.title;const button=document.createElement('button');button.className='part-loop';button.textContent='↻ Loop part';button.setAttribute('aria-label',`Loop ${part.title}`);button.onclick=()=>{const indexes=part.bars.map(id=>song.bars.findIndex(b=>b.id===id));selection=[Math.min(...indexes),Math.max(...indexes)];selectionAnchor=selection[0];enableLoop(true);};heading.append(title,button);section.append(heading);for(const id of part.bars){const bar=bars.get(id),index=song.bars.indexOf(bar);const row=document.createElement('div');row.className='bar-row';row.dataset.bar=id;row.tabIndex=0;row.setAttribute('role','button');row.setAttribute('aria-label',`Play bar ${id}; shift-click to select a range`);const number=document.createElement('span');number.className='bar-number';number.textContent=String(id).padStart(2,'0');number.setAttribute('aria-hidden','true');row.append(number);for(const line of layoutBar(song,bar)){const wrap=document.createElement('div');wrap.className='line-wrap';wrap.dataset.start=line.start;wrap.dataset.end=line.end;const pre=document.createElement('pre');pre.className='guide-line';const byCol=new Map(line.notes.map(n=>[n.col,n]));for(let col=0;col<line.text.length;){if(byCol.has(col)){const n=byCol.get(col),span=document.createElement('span');span.className='note'+(n.e.type==='rest'?' rest':n.e.accidental?' altered-'+colors.get(alteredKey(n.e)):'');span.dataset.event=n.i;span.textContent=n.e.type==='rest'?'R':n.e.label;span.title=n.e.type==='rest'?'Rest':`${n.e.label}${n.e.octave} · ${frequency(n.e).toFixed(2)} Hz${n.e.turkishName?' · '+n.e.turkishName:''}`;pre.append(span);col+=span.textContent.length;}else{const span=document.createElement('span');if(line.text[col]==='|')span.className='beat-bar';span.textContent=line.text[col];pre.append(span);col++;}}const cursor=document.createElement('span');cursor.className='cursor';cursor.setAttribute('aria-hidden','true');const sub=document.createElement('pre');sub.className='subdivision';sub.setAttribute('aria-hidden','true');sub.hidden=settings.subdivision==='off';sub.textContent=subdivisionText(line,settings.subdivision);wrap.append(pre,cursor,sub);row.append(wrap);}row.onclick=e=>selectBar(index,e.shiftKey);row.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();selectBar(index,e.shiftKey);}};section.append(row);}guide.append(section);}renderKey();fitGuide();paintSelection();}
+function renderGuide(){colors=new Map();for(const b of song.bars)for(const e of b.events)if(e.accidental&&!colors.has(alteredKey(e)))colors.set(alteredKey(e),colors.size%6);const guide=$('guide');guide.replaceChildren();const bars=new Map(song.bars.map(b=>[b.id,b]));for(const part of song.parts){const section=document.createElement('section');section.className='part';const heading=document.createElement('div');heading.className='part-heading';const title=document.createElement('h2');title.className='part-title';title.textContent=part.title;const button=document.createElement('button');button.className='part-loop';button.textContent='↻ Loop part';button.setAttribute('aria-label',`Loop ${part.title}`);button.onclick=()=>{const indexes=part.bars.map(id=>song.bars.findIndex(b=>b.id===id));selection=[Math.min(...indexes),Math.max(...indexes)];selectionAnchor=selection[0];enableLoop(true);};heading.append(title,button);section.append(heading);for(const id of part.bars){const bar=bars.get(id),index=song.bars.indexOf(bar);const row=document.createElement('div');row.className='bar-row';row.dataset.bar=id;row.tabIndex=0;row.setAttribute('role','button');row.setAttribute('aria-label',`Play bar ${id}; shift-click to select a range`);const number=document.createElement('span');number.className='bar-number';number.textContent=String(id).padStart(2,'0');number.setAttribute('aria-hidden','true');row.append(number);for(const line of layoutBar(song,bar)){const wrap=document.createElement('div');wrap.className='line-wrap';wrap.dataset.start=line.start;wrap.dataset.end=line.end;const pre=document.createElement('pre');pre.className='guide-line';const byCol=new Map(line.notes.map(n=>[n.col,n]));for(let col=0;col<line.text.length;){if(byCol.has(col)){const n=byCol.get(col),span=document.createElement('span');span.className='note'+(n.e.type==='rest'?' rest':n.e.accidental?' altered-'+colors.get(alteredKey(n.e)):'');span.dataset.event=n.i;span.textContent=n.e.type==='rest'?'R':n.e.label;span.title=n.e.type==='rest'?'Rest':`${n.e.label}${n.e.octave} · ${frequency(n.e).toFixed(2)} Hz${n.e.turkishName?' · '+n.e.turkishName:''}`;pre.append(span);col+=span.textContent.length;}else{const span=document.createElement('span');if(line.text[col]==='|')span.className='beat-bar';span.textContent=line.text[col];pre.append(span);col++;}}const cursor=document.createElement('span');cursor.className='cursor';cursor.setAttribute('aria-hidden','true');const sub=document.createElement('pre');sub.className='subdivision';sub.setAttribute('aria-hidden','true');sub.hidden=settings.subdivision==='off';sub.textContent=subdivisionText(line,settings.subdivision);const textTrack=document.createElement("div");textTrack.className="text-track";textTrack.append(pre,cursor,sub);wrap.append(renderStaff(bar,line),textTrack);row.append(wrap);}row.onclick=e=>selectBar(index,e.shiftKey);row.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();selectBar(index,e.shiftKey);}};section.append(row);}guide.append(section);}renderKey();fitGuide();paintSelection();}
 function renderKey(){const key=$('key');key.replaceChildren();const label=document.createElement('span');label.className='eyebrow';label.textContent='Pitch key';key.append(label);const found=new Set();for(const bar of song.bars)for(const e of bar.events){if(!e.accidental||found.has(alteredKey(e)))continue;found.add(alteredKey(e));const item=document.createElement('span'),strong=document.createElement('strong');strong.textContent=e.label;strong.className='altered-'+colors.get(alteredKey(e));item.append(strong,document.createTextNode(` · ${e.letter} ${ACCIDENTAL_NAMES[e.accidental]}, ${Math.abs(ACCIDENTALS[e.accidental])} koma${e.turkishName?' · '+e.turkishName:''}`));key.append(item);}if(!found.size)key.append(document.createTextNode('All notes are natural.'));}
 function fitGuide(){const row=$('guide').querySelector('.bar-row');if(!row)return;const pad=parseFloat(getComputedStyle(row).paddingLeft);const available=row.clientWidth-pad-6;const maxCols=Math.max(...[...document.querySelectorAll('.guide-line')].map(e=>e.textContent.length));const measure=document.createElement('span');measure.className='measure';measure.textContent='0000000000';document.body.append(measure);const ratio=measure.getBoundingClientRect().width/10/20;measure.remove();$('guide').style.setProperty('--guide-size',Math.max(6,Math.min(24,available/(maxCols*ratio)))+'px');}
 new ResizeObserver(fitGuide).observe($('guide'));
@@ -212,6 +442,9 @@ function runSelfTest(){const checks=[];function check(name,fn){try{fn();checks.p
  for(const percent of [50,100,150])check(`Full performance clock mapping at ${percent}% (every onset and 10,001 cursor samples)`,()=>{const r=buildRoute(DEMO),rate=16*percent/100,c=new TempoClock(7,0,rate);for(let i=0;i<=10000;i++){const tick=r.total*i/10000;assert(Math.abs(c.tickAt(c.timeAt(tick))-tick)<1e-8);}for(const v of r.bars){let t=v.start;for(const e of v.bar.events){assert(Math.abs(c.tickAt(c.timeAt(t))-t)<1e-8);t+=e.duration;}}});
  check('Tempo edits preserve continuity and previously scheduled times',()=>{const c=new TempoClock(1,0,16),prior=c.timeAt(16);c.setRate(3.12,8);assert(c.timeAt(16)===prior);const at=c.tickAt(3.12);assert(Math.abs(c.tickAt(4.12)-at-8)<1e-9);for(let t=1;t<20;t+=.03)assert(Math.abs(c.timeAt(c.tickAt(t))-t)<1e-8);});
  check('Loop bars 2–3: eight cycles, no missing or duplicated onset at boundaries',()=>{const r=buildRoute(DEMO,[1,2]),items=[];for(const v of r.bars){let tick=v.start;for(const e of v.bar.events){items.push({tick});tick+=e.duration;}}const collected=[];for(let start=0;start<r.total*8;start+=1.37)enumerateWindow(items,r.total,true,start,Math.min(start+1.37,r.total*8),(_,tick)=>collected.push(tick));assert(collected.length===items.length*8,`${collected.length} scheduled, expected ${items.length*8}`);assert(new Set(collected).size===collected.length);for(let i=0;i<8;i++)assert(collected.filter(t=>t===i*r.total).length===1);});
+ check('Staff durations preserve every demo event and dotted notes',()=>{for(const b of DEMO.bars){const pieces=sheetPieces(b,{start:0,end:barTicks(DEMO)});for(const [i,e] of b.events.entries())assert(pieces.filter(p=>p.index===i).reduce((t,p)=>t+p.duration,0)===e.duration);}assert(sheetPieces(DEMO.bars[1],{start:0,end:64}).some(p=>p.dotted&&p.duration===6));});
+ check('Staff splits unusual durations with ties and carries held notes across lines',()=>{const b={events:[{type:'note',letter:'C',octave:4,duration:11},{type:'rest',duration:5}]};const a=sheetPieces(b,{start:0,end:8}),c=sheetPieces(b,{start:8,end:16});assert(a[0].duration===8&&a[0].tieOut);assert(c[0].duration===3&&c[0].tieIn);assert(c.reduce((n,p)=>n+p.duration,0)===8);});
+ check('Staff treble positions distinguish octaves and ledger notes',()=>{assert(sheetPitchY({letter:'E',octave:4})===110);assert(sheetPitchY({letter:'F',octave:5})===66);assert(sheetPitchY({letter:'C',octave:4})===121);assert(sheetPitchY({letter:'E',octave:5})===71.5);});
  check('Self-contained file: no external scripts, stylesheets, or media',()=>assert(!document.querySelector('script[src],link[rel="stylesheet"],audio[src],video[src],img[src^="http"]')));
  const result={passed:checks.filter(c=>c.passed).length,failed:checks.filter(c=>!c.passed).length,checks};window.__selfTest=result;$('test-output').textContent=`${result.passed} passed · ${result.failed} failed\n\n`+checks.map(c=>`${c.passed?'PASS':'FAIL'}  ${c.name}${c.error?'\n      '+c.error:''}`).join('\n')+'\n\nClock checks are deterministic simulations, not a listening test.\nUse a Mac to confirm sound and file:// behavior in Safari, Chrome, and Firefox.';return result;}
 $('tests-button').onclick=()=>{runSelfTest();$('test-dialog').showModal();};

@@ -8,6 +8,18 @@ Download `index.html` and double-click it, or use your browser's **File → Open
 
 The built-in **Hicâz İlâhî · Ey rahmeti bol pâdişâh** is available immediately. Start with the default quarter = 60 BPM and written pitch. A bar of count-in clicks plays before starting; click **Count-in** to turn it off. Pause resumes at the same musical position, re-plucking a held note so it remains audible. Stop returns to the beginning or loop start.
 
+## Sheet music experiment
+
+On `experiment/sheet-music-follow-along`, **Sheet + text** places a treble staff above each line of the original text guide. The same event highlights in both views, with a staff cursor following the playback clock. Click either view to start its bar; selection, repeats, loops, pause, and tempo edits work together. **Text only** restores the compact guide.
+
+The staff is generated from each song's existing pitches and 64th-note durations, including imported songs. It shows beams, dotted notes, rests, ledger lines, and tied spellings for unusual durations or notes held across staff lines. On narrow screens the staff scrolls horizontally and follows the cursor; swipe it to inspect a bar. Manual scrolling suspends following briefly.
+
+Altered notes use explicit **↑4 / ↓4** style annotations in koma rather than approximating the tuning with Western accidentals. Colors match the text pitch key. This is an experimental reading aid using treble clef and explicit pitch annotations, rather than traditional Turkish accidental glyphs or a reproduction of the original score. Transpose and fine tuning change the audio; both written views retain the transcription's pitch.
+
+Rendering remains entirely offline, with no library downloads or build step. Music glyph outlines are embedded from Noto Music under SIL OFL 1.1; its attribution and license are included in the HTML and [FONT-LICENSE.txt](FONT-LICENSE.txt).
+
+The experiment passed all 23 built-in self-tests and 25 additional Chromium browser checks, including all performance bar visits, loop wrapping, real Web Audio playback, view switching, tempo edits, imported held notes, and widths from 320 to 1366 pixels. Audible quality and direct-file behavior on macOS browsers still need a device check.
+
 ## Practice
 
 - **Click a bar** to play from it. **Shift-click** another bar to select a range, then use **Loop selection** or **L**. **Loop part** selects and starts that part. **Clear loop** resumes the full play order.
