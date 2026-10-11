@@ -133,7 +133,7 @@ Each part is an object:
 | Field | Required | Type and rules |
 | --- | --- | --- |
 | `id` | yes | Unique nonempty string, at most 80 code units, no control characters. Used by `playOrder`. |
-| `title` | yes | Nonempty string, at most 500 code units, no control characters. The **entire heading**, reproduced verbatim above the bars. Include any `PART 1:`, bar range, or `(repeat)` annotations yourself. Two spaces are preserved. |
+| `title` | yes | Nonempty string, at most 500 code units, no control characters. The **entire canonical heading**. The practice view presents `PART N:` as `Part N ·` and separates a trailing `(bars …)` annotation into smaller supporting text. Stored/exported titles are unchanged. Include any `PART 1:`, bar range, or `(repeat)` annotations yourself. Two spaces are preserved. |
 | `bars` | yes | Nonempty array of existing bar IDs, with no duplicates. |
 
 Concatenating the `bars` arrays of all parts must equal the root `bars` IDs in order, with every bar included exactly once. Display repeats by using `playOrder`, not by placing the same bar in two parts. If separate printed bars happen to have identical notes (demo bars 3 and 5), give each its own bar ID and event list.
@@ -157,9 +157,10 @@ A loop uses an inclusive contiguous range in **displayed bar order**, ignoring `
 - Every denominator beat is followed by `|`. Add one more `|` at the end of the bar. Thus a 4/4 bar is `4 × (16 + 1) + 1 = 69` characters.
 - The first character of a label sits at its onset tick, plus one extra column for each preceding beat divider. Remaining columns contain spaces. Rests show `R` at their onset.
 - For long meters, find the fewest equal-length lines that partition the numerator into whole denominator beats and keep lines at most 72 characters. Every line ends after a beat divider; only the last line gets the extra `|`. A prime-numbered long meter may need one beat per line to keep equal lengths.
+- The larger-note view and narrow windows use a 36-column limit, wrapping at equal beat groups. The canonical text serialization keeps the 72-column limit. All visible note labels share one font size; grid spacing accommodates the longest dense syllables rather than shrinking individual notes.
 - A note continuing across a visual line break is not relabeled. Its onset label remains highlighted, while the cursor moves to the continuation line.
-- The player can display fixed-do names (C/do, D/re, E/mi, F/fa, G/sol, A/la, B/si) below the stored letter labels, or make fixed-do dominant. Names are derived from `letter` plus the display accidental suffix; they are not added to song events and do not affect frequencies or onset columns.
-- 16ths mode places `1 e & a` at four positions per quarter; 32nds places `1 · e · & · a ·` at eight positions. These are view/editor settings; event duration ticks remain unchanged.
+- The player can display fixed-do names (C/do, D/re, E/mi, F/fa, G/sol, A/la, B/si), letters alone, or both with either system dominant. Fixed-do alone is the default; secondary names are neutral grey. Names are derived from `letter` plus the display accidental suffix; they are not added to song events and do not affect frequencies or onset columns.
+- The default quiet ruler uses small quarter numbers and fine subdivision ticks. Fine detail appears only on the playing bar, unless All bars or Edit mode is selected. Optional Counting mode places `1 e & a` at four positions per quarter for 16ths and `1 · e · & · a ·` at eight positions for 32nds. These are view/editor settings; event duration ticks remain unchanged.
 - Quarters mode marks actual quarter-note positions `1 2 3 …`; Eighths mode marks those positions plus `&` halfway between. These remain true quarter/eighth positions in `/8` meters; denominator beat dividers and metronome clicks still occur every eighth.
 - Only notes with an explicit accidental are colored. Natural notes use the main text color; rest labels and beat dividers are muted. The active note/rest uses the highlight box.
 
@@ -177,8 +178,11 @@ A loop uses an inclusive contiguous range in **displayed bar order**, ignoring `
       "tempoPercent": 100,
       "transpose": 0,
       "fine": 0,
-      "subdivision": "off",
-      "noteNames": "western",
+      "subdivision": "sixteenths",
+      "noteNames": "solfege",
+      "gridStyle": "ruler",
+      "gridScope": "active",
+      "noteZoom": "fit",
       "metronome": false,
       "countIn": true
     }
@@ -187,10 +191,10 @@ A loop uses an inclusive contiguous range in **displayed bar order**, ignoring `
 ```
 
 - `format`, `version`, and `songs` are required. `songs` is an array of 0–200 complete valid songs; duplicate titles within one backup are rejected.
-- `settings` is an optional object keyed by exact song title. Tempo percent is clamped to 30–150; transpose must be one of the named shifts above; integer fine is clamped to −53…+53; subdivision is `off`, `quarters`, `eighths`, `sixteenths`, or `thirtyseconds`; `noteNames` is `western` (letters dominant, default) or `solfege` (fixed-do dominant); toggles are booleans. Invalid/missing setting fields use defaults shown above.
+- `settings` is an optional object keyed by exact song title. Tempo percent is clamped to 30–150; transpose must be one of the named shifts above; integer fine is clamped to −53…+53; subdivision is `off`, `quarters`, `eighths`, `sixteenths`, or `thirtyseconds`; `noteNames` is `western` (letters only), `solfege` (fixed-do only, default), `both-western`, or `both-solfege`; `gridStyle` is `ruler` (default) or `counting`; `gridScope` is `active` (default, detail on playing bar only) or `all`; `noteZoom` is `fit` (default) or `large`; toggles are booleans. Invalid/missing setting fields use defaults shown above.
 - Import merges the songs into the current library, asking before same-title replacement. A cancelled replacement changes nothing. All songs are validated **before any change**. Existing songs not mentioned are retained.
 - Settings for imported song titles are restored. The built-in sample's settings can also be restored even when the backup contains no songs. The built-in sample itself is not automatically included in exports; it is already available in every copy of the app.
-- Export does not include transient selection, loop, playhead, or volume positions. Those controls reset on a fresh page.
+- Export does not include the transient Practice/Edit mode, selection, loop, playhead, or volume positions. Those controls reset on a fresh page.
 - If browser storage is unavailable or full, import/playback work in memory and a visible message recommends exporting a backup.
 
 ## Complete worked example
